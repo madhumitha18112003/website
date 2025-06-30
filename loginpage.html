@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            LOGIN PAGE - Madhu
+        </title>
+        <link rel="stylesheet" href="logsty.css">
+    </head>
+    <body>
+        <h1 id="heading">LOGIN PAGE</h1>
+            <form onsubmit="return validate();">
+             <label for="fname">FIRST NAME</label>
+             <input type="text" id="fname" >
+             <label for="lname">LAST NAME</label>
+             <input type="text" id="lname" >
+             <label for="phone number"> PHONE NUMBER</label>
+             <input type="number" id="phno" >
+             <label for="dob">DATE OF BIRTH</label>
+             <input type="date" id="dob" >
+             <label for="mailid">MAIL ID</label>
+             <input type="mail" id="mailid" >
+             <button type="submit">SUBMIT</button>
+            </form>
+            <p id="bek"></p>
+            <script>
+                function validate(){
+                 var fname,lname,mail,dob,phno;
+                 fname = document.getElementById("fname").value;
+                 lname = document.getElementById("lname").value;
+                 phno  = document.getElementById("phno").value;
+                 dob  = document.getElementById("dob").value;
+                 mail = document.getElementById("mailid").value;
+
+                 document.getElementById("bek").innerHTML="HELLO "+fname+lname+ " Born on"+dob+" whose contact number is"+phno+" and mail id is"+mail+ " . BYEEE"
+                 return false;
+                }
+            </script>
+    </body>
+</html>
